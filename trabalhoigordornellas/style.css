@@ -1,0 +1,159 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fontes e cores */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* Estilos diferentes para cada página */
+body.menu {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+body.sobre {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+}
+body.formacao {
+  background: linear-gradient(135deg, #42275a, #734b6d);
+}
+body.contatos {
+  background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+/* Título com borda */
+.titulo-com-borda {
+  font-size: 3em;
+  color: #ffd700;
+  text-align: center;
+  margin-bottom: 40px;
+  border: 4px solid #ffd700;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Menu */
+.menu-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.menu-links a {
+  text-decoration: none;
+  font-size: 1.5em;
+  padding: 15px 30px;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  color: #fff;
+}
+.menu-links a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+/* Links de voltar */
+.voltar {
+  display: inline-block;
+  margin-top: 40px;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  background-color: #ffd700;
+  color: #000;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+.voltar:hover {
+  background-color: #fff700;
+}
+
+/* Imagens */
+.imagem-perfil,
+.imagem-formacao,
+.imagem-contato {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border: 3px solid #ffd700;
+  border-radius: 15px;
+}
+
+/* Lista de contatos */
+.lista-contato {
+  list-style: none;
+  font-size: 1.2em;
+}
+.lista-contato li {
+  margin: 10px 0;
+}
+.lista-contato a {
+  color: #ffd700;
+  text-decoration: underline;
+}
+/* ===== Loja de Bicicletas ===== */
+body.loja {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: #fff;
+}
+
+.grid-bikes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card-bike {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 3px solid #fff;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card-bike:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-bike h2 {
+  color: #ffeb3b;
+  margin-bottom: 10px;
+  font-size: 1.4em;
+}
+
+.card-bike p {
+  font-size: 1em;
+}
+
+/* Imagens das bicicletas */
+.img-bike {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #ffeb3b;
+}
+
+body.modo-escuro {
+  background-color: #121212 !important;
+  color: #f1f1f1 !important;
+}
