@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu do Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="menu">
+
+  <div class="container">
+    <h1 class="titulo-com-borda">Meu Portfólio</h1>
+
+    <!-- Boas-vindas personalizadas -->
+    <h2 id="mensagem-boas-vindas"></h2>
+
+    <!-- Botão para modo escuro -->
+    <button>🌗 Alternar Tema</button>
+
+    <!-- Menu de links -->
+    <nav class="menu-links">
+      <a href="sobre.html">Sobre Mim</a>
+      <a href="formacao.html">Formação</a>
+      <a href="contatos.html">Contatos</a>
+      <a href="loja.html">Projeto</a>
+    </nav>
+
+    <!-- Rodapé com data/hora -->
+    <footer>
+      <p id="data-hora"></p>
+    </footer>
+  </div>
+
+  <!-- Script JavaScript com as 3 funções -->
+  <script>
+    // Boas-vindas
+    const nome = prompt("Qual seu nome?");
+    if (nome) {
+      document.getElementById("mensagem-boas-vindas").innerText = `Bem-vindo, ${nome}!`;
+    }
+
+    // Modo escuro
+    window.onload = function () {
+    // Botão alternar tema
+    document.querySelector("button").onclick = function () {
+      document.body.classList.toggle("modo-escuro");
+    };
+
+    // Data e hora
+    const data = new Date();
+    const dataHora = document.getElementById("data-hora");
+    if (dataHora) {
+      dataHora.innerText =
+        `Acessado em: ${data.toLocaleDateString()} às ${data.toLocaleTimeString()}`;
+    }
+  };
+  </script>
+</body>
+</html>
